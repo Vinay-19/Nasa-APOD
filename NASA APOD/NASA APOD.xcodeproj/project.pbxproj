@@ -17,9 +17,13 @@
 		A1AC6349293ED7E1003DB832 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC6348293ED7E1003DB832 /* NetworkManager.swift */; };
 		A1AC634C293ED842003DB832 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC634B293ED842003DB832 /* Constants.swift */; };
 		A1AC634F293ED886003DB832 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC634E293ED886003DB832 /* URL+Extensions.swift */; };
+		A1AC6351293EF9BD003DB832 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC6350293EF9BD003DB832 /* BaseViewController.swift */; };
+		A1AC6355293F0028003DB832 /* ApodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC6354293F0028003DB832 /* ApodDetailViewController.swift */; };
+		E0086215F53FD3B9C10697A5 /* Pods_NASA_APOD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4048A90730DBB0335EDEFF3 /* Pods_NASA_APOD.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1877FBD1EFDCCAAA677A04C3 /* Pods-NASA APOD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NASA APOD.debug.xcconfig"; path = "Target Support Files/Pods-NASA APOD/Pods-NASA APOD.debug.xcconfig"; sourceTree = "<group>"; };
 		A1AC632D293ED717003DB832 /* NASA APOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NASA APOD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1AC6330293ED717003DB832 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1AC6332293ED717003DB832 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +36,10 @@
 		A1AC6348293ED7E1003DB832 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		A1AC634B293ED842003DB832 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A1AC634E293ED886003DB832 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
+		A1AC6350293EF9BD003DB832 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		A1AC6354293F0028003DB832 /* ApodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodDetailViewController.swift; sourceTree = "<group>"; };
+		F4048A90730DBB0335EDEFF3 /* Pods_NASA_APOD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NASA_APOD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6048843767D8E52DD081E4B /* Pods-NASA APOD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NASA APOD.release.xcconfig"; path = "Target Support Files/Pods-NASA APOD/Pods-NASA APOD.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +47,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0086215F53FD3B9C10697A5 /* Pods_NASA_APOD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AEDEC90937E2A4314C04C31 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1877FBD1EFDCCAAA677A04C3 /* Pods-NASA APOD.debug.xcconfig */,
+				F6048843767D8E52DD081E4B /* Pods-NASA APOD.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A1AC6324293ED717003DB832 = {
 			isa = PBXGroup;
 			children = (
 				A1AC632F293ED717003DB832 /* NASA APOD */,
 				A1AC632E293ED717003DB832 /* Products */,
+				1AEDEC90937E2A4314C04C31 /* Pods */,
+				FBB8C45FC12F595BD9B44617 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,13 +87,14 @@
 				A1AC634D293ED874003DB832 /* Extensions */,
 				A1AC634A293ED831003DB832 /* Utils */,
 				A1AC6344293ED79E003DB832 /* Networking */,
-				A1AC6330293ED717003DB832 /* AppDelegate.swift */,
+				A1AC6352293EFFFB003DB832 /* View Controllers */,
 				A1AC6332293ED717003DB832 /* SceneDelegate.swift */,
-				A1AC6334293ED717003DB832 /* ViewController.swift */,
+				A1AC6330293ED717003DB832 /* AppDelegate.swift */,
 				A1AC6336293ED717003DB832 /* Main.storyboard */,
 				A1AC6339293ED718003DB832 /* Assets.xcassets */,
 				A1AC633B293ED718003DB832 /* LaunchScreen.storyboard */,
 				A1AC633E293ED718003DB832 /* Info.plist */,
+				A1AC6350293EF9BD003DB832 /* BaseViewController.swift */,
 			);
 			path = "NASA APOD";
 			sourceTree = "<group>";
@@ -103,6 +124,23 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		A1AC6352293EFFFB003DB832 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A1AC6334293ED717003DB832 /* ViewController.swift */,
+				A1AC6354293F0028003DB832 /* ApodDetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FBB8C45FC12F595BD9B44617 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4048A90730DBB0335EDEFF3 /* Pods_NASA_APOD.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -110,9 +148,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1AC6341293ED718003DB832 /* Build configuration list for PBXNativeTarget "NASA APOD" */;
 			buildPhases = (
+				9F0672B3C85CAC344A4882FC /* [CP] Check Pods Manifest.lock */,
 				A1AC6329293ED717003DB832 /* Sources */,
 				A1AC632A293ED717003DB832 /* Frameworks */,
 				A1AC632B293ED717003DB832 /* Resources */,
+				BF4D3FC94A90F9E943C26D22 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -169,6 +209,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9F0672B3C85CAC344A4882FC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NASA APOD-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF4D3FC94A90F9E943C26D22 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NASA APOD/Pods-NASA APOD-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NASA APOD/Pods-NASA APOD-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NASA APOD/Pods-NASA APOD-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A1AC6329293ED717003DB832 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -179,6 +261,8 @@
 				A1AC6331293ED717003DB832 /* AppDelegate.swift in Sources */,
 				A1AC6349293ED7E1003DB832 /* NetworkManager.swift in Sources */,
 				A1AC6346293ED7AB003DB832 /* NasaData.swift in Sources */,
+				A1AC6355293F0028003DB832 /* ApodDetailViewController.swift in Sources */,
+				A1AC6351293EF9BD003DB832 /* BaseViewController.swift in Sources */,
 				A1AC6333293ED717003DB832 /* SceneDelegate.swift in Sources */,
 				A1AC634C293ED842003DB832 /* Constants.swift in Sources */,
 			);
@@ -322,6 +406,7 @@
 		};
 		A1AC6342293ED718003DB832 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1877FBD1EFDCCAAA677A04C3 /* Pods-NASA APOD.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -350,6 +435,7 @@
 		};
 		A1AC6343293ED718003DB832 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6048843767D8E52DD081E4B /* Pods-NASA APOD.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

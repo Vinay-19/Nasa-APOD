@@ -15,14 +15,77 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lZK-Sl-p60">
+                                <rect key="frame" x="15" y="103" width="363" height="330"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="330" id="agB-Bb-1bq"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDw-HU-OyE">
+                                <rect key="frame" x="15" y="453" width="363" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Rel-vU-gpj"/>
+                                    <constraint firstAttribute="height" constant="50" id="Vnd-Ha-xjp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lZK-Sl-p60" secondAttribute="trailing" constant="15" id="1LR-Bm-oqa"/>
+                            <constraint firstItem="lZK-Sl-p60" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="95a-ge-dLV"/>
+                            <constraint firstItem="BDw-HU-OyE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="AZz-80-XQI"/>
+                            <constraint firstItem="lZK-Sl-p60" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="E0r-DC-oDj"/>
+                            <constraint firstItem="BDw-HU-OyE" firstAttribute="top" secondItem="lZK-Sl-p60" secondAttribute="bottom" constant="20" id="Rjt-yH-Fzc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BDw-HU-OyE" secondAttribute="trailing" constant="15" id="Sbc-p9-iAH"/>
+                            <constraint firstItem="BDw-HU-OyE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="doa-4P-ah5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BDw-HU-OyE" secondAttribute="trailing" constant="15" id="vUE-u2-aow"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Nasa APOD" id="Oxf-ZQ-YiO"/>
+                    <connections>
+                        <outlet property="apodImgView" destination="lZK-Sl-p60" id="Y3o-mT-Hje"/>
+                        <outlet property="apodTitleView" destination="BDw-HU-OyE" id="o0i-lR-9ym"/>
+                        <segue destination="Nko-1E-jEm" kind="show" identifier="goTo" id="dDM-mu-O1j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057.2519083969464" y="-28.169014084507044"/>
+            <point key="canvasLocation" x="1055.7251908396945" y="-28.169014084507044"/>
+        </scene>
+        <!--Apod Detail View Controller-->
+        <scene sceneID="Geu-WX-rWS">
+            <objects>
+                <viewController id="Nko-1E-jEm" customClass="ApodDetailViewController" customModule="NASA_APOD" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fbe-s9-nZ2">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="usS-Lg-gfJ">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EH0-LY-B32"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EH0-LY-B32" firstAttribute="trailing" secondItem="usS-Lg-gfJ" secondAttribute="trailing" id="7rO-Jr-Mro"/>
+                            <constraint firstItem="usS-Lg-gfJ" firstAttribute="top" secondItem="EH0-LY-B32" secondAttribute="top" id="OsZ-E4-uUd"/>
+                            <constraint firstItem="EH0-LY-B32" firstAttribute="bottom" secondItem="usS-Lg-gfJ" secondAttribute="bottom" id="TaO-PH-FN2"/>
+                            <constraint firstItem="usS-Lg-gfJ" firstAttribute="leading" secondItem="EH0-LY-B32" secondAttribute="leading" id="w11-NC-i2n"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vJa-QT-yxm"/>
+                    <connections>
+                        <outlet property="apodHDImgView" destination="usS-Lg-gfJ" id="uqy-7H-fiV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J9p-rD-dtN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2066" y="-28"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cFM-6Z-9Pf">
